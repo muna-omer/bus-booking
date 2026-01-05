@@ -1,10 +1,4 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
-import Navbar from './Component/navbar'
 import './index.css'
-import Hero from './Component/Hero'
-import Rough from './Component/rough'
 import ContactForm from './Component/ContactForm'
 
 
@@ -15,7 +9,7 @@ function App() {
 
     <div className='min-h-screen flex flex-col text-black'>
       <header className='h-16 bg-white flex items-center justify-between fixed w-full px-6 md:px-8 top-0 z-10'>
-        <h1 className='text-2xl md:text-2xl font-bold'>Safari</h1>
+        <h1 className='text-2xl md:text-2xl font-bold'>  Manka Travel</h1>
         <nav className='space-x-6 font-bold hidden md:block'>
 
           <a href="#home" className='hover:underline hover:rounded-lg hover:shadow-xl hover:bg-indigo-100 hover:text-indigo-600 transition duration-300 inline-block px-2 py-1'>Home</a>
@@ -24,11 +18,7 @@ function App() {
           <a href="#clients" className='hover:underline hover:rounded-lg hover:shadow-xl hover:bg-indigo-100 hover:text-indigo-600 transition duration-300 inline-block px-2 py-1'>Clients</a>
           <a href="#contact" className='hover:underline hover:rounded-lg hover:shadow-xl hover:bg-indigo-100 hover:text-indigo-600 transition duration-300 inline-block px-2 py-1'>Contact</a>
           <button type='button' onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className='px-6 py-3 rounded-lg shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-600 hover:opacity-90 text-white transition duration-300' aria-controls='contact' aria-label='Scroll to contact'>Get Started</button>
-          {/* <a className='hover:underline'>Home</a>
-          <a className='hover:underline'>About</a>
-          <a className='hover:underline'>Service</a>
-          <a className='hover:underline'>Clients</a>
-          <a className='hover:underline'>Contact</a> */}
+         
         </nav>
       </header>
       <section id='home' className='min-h-screen pt-16 bg-indigo-50 text-center  flex-col justify-center items-center flex'>

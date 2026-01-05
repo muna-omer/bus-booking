@@ -12,7 +12,8 @@ const ContactForm = () => {
   const validate = () => {
     if (!name.trim()) return 'Please enter your name.'
     if (!email.trim()) return 'Please enter your email.'
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\\.,;:\s@\"]+\.)+[^<>()[\]\\.,;:\s@\"]{2,})$/i
+    // simple email check
+    const re = /^\S+@\S+\.\S+$/
     if (!re.test(email)) return 'Please enter a valid email.'
     if (!message.trim()) return 'Please enter a message.'
     if (honeypot) return 'Bot detected.'
@@ -36,7 +37,8 @@ const ContactForm = () => {
       setName('')
       setEmail('')
       setMessage('')
-    } catch (err) {
+    } catch (error) {
+      console.error(error)
       setError('Submission failed. Please try again later.')
     } finally {
       setSubmitting(false)
